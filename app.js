@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 //URL
 app.use(route);
 
-//RUNNING SERVER
+// RUNNING SERVER
 // app.listen(port, () => {
 // 	console.log("listening on port " + port);
 // });

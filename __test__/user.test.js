@@ -325,6 +325,8 @@ describe("DELETE /users/:id", () => {
                 expect(res.status).toEqual(200)
                 expect(res.body).toHaveProperty("message")
                 expect(res.body.message).toEqual("Your account has been successfully deleted")
+                expect(typeof res).toBe("object")
+                expect(res.body.message).toContain("deleted")
                 done()
             })
     });
