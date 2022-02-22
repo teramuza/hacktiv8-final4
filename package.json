@@ -2,9 +2,11 @@
   "name": "fp2_h8",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:create:test": "NODE_ENV=test npx sequelize db:create",
+    "db:migrate:test": "NODE_ENV=test npx sequelize db:migrate",
+    "test": "NODE_ENV=test npx jest --runInBand --detectOpenHandles --forceExit",
     "start": "node app.js"
   },
   "author": "",
@@ -13,11 +15,13 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jest": "^27.5.1",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.15",
     "path": "^0.12.7",
     "pg": "^8.7.1",
     "sequelize": "^6.12.0-alpha.1",
-    "sequelize-cli": "^6.3.0"
+    "sequelize-cli": "^6.3.0",
+    "supertest": "^6.2.2"
   }
 }
